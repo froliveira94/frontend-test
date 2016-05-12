@@ -121,7 +121,52 @@ header {
 .tooltip {
   position: absolute;
   right: 0;
-  top: 400px;
+  top: 215px;
   width: 162px; }
-  .tooltip .tooltip-status ul li {
-    list-style: none; }
+  .tooltip img {
+    margin-top: 18px; }
+  .tooltip .tooltip-status {
+    width: 151px;
+    float: right; }
+    .tooltip .tooltip-status ul {
+      overflow: hidden;
+      float: left; }
+      .tooltip .tooltip-status ul:first-child {
+        border-right: 1px solid #8c8b8b; }
+        .tooltip .tooltip-status ul:first-child li:first-child {
+          -webkit-border-radius: 5px 0 0 0;
+          -moz-border-radius: 5px 0 0 0;
+          -ms-border-radius: 5px 0 0 0;
+          border-radius: 5px 0 0 0; }
+        .tooltip .tooltip-status ul:first-child li:last-child {
+          -webkit-border-radius: 0 0 0 5px;
+          -moz-border-radius: 0 0 0 5px;
+          -ms-border-radius: 0 0 0 5px;
+          border-radius: 0 0 0 5px; }
+      .tooltip .tooltip-status ul:last-child {
+        border-left: 1px solid #c57071; }
+        .tooltip .tooltip-status ul:last-child li:first-child {
+          -webkit-border-radius: 0 5px 0 0;
+          -moz-border-radius: 0 5px 0 0;
+          -ms-border-radius: 0 5px 0 0;
+          border-radius: 0 5px 0 0; }
+        .tooltip .tooltip-status ul:last-child li:last-child {
+          -webkit-border-radius: 0 0 5px 0;
+          -moz-border-radius: 0 0 5px 0;
+          -ms-border-radius: 0 0 5px 0;
+          border-radius: 0 0 5px 0; }
+      .tooltip .tooltip-status ul li {
+        list-style: none; }
+        .tooltip .tooltip-status ul li:first-child {
+          background-color: #ba3638;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 10px;
+          text-align: center;
+          padding: 4px 8px; }
+        .tooltip .tooltip-status ul li:last-child {
+          background-color: #f8f7f7;
+          color: #909090;
+          font-size: 24px;
+          text-align: center;
+          padding: 7px 0; }

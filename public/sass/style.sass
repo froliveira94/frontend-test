@@ -123,9 +123,43 @@ header
 .tooltip
   position: absolute
   right: 0
-  top: 400px
+  top: 215px
   width: 162px
+  img
+    margin-top: 18px
   .tooltip-status
+    width: 151px
+    float: right
     ul
+      overflow: hidden
+      float: left
+      &:first-child
+        border-right: 1px solid #8c8b8b
+        li
+          &:first-child
+            +border-radius(5px 0 0 0)
+          &:last-child
+            +border-radius(0 0 0 5px)
+      &:last-child
+        border-left: 1px solid #c57071
+        li
+          &:first-child
+            +border-radius(0 5px 0 0)
+          &:last-child
+            +border-radius(0 0 5px 0)
+
       li
         list-style: none
+        &:first-child
+          background-color: #ba3638
+          color: #fff
+          text-transform: uppercase
+          font-size: 10px
+          text-align: center
+          padding: 4px 8px
+        &:last-child
+          background-color: #f8f7f7
+          color: #909090
+          font-size: 24px
+          text-align: center
+          padding: 7px 0
