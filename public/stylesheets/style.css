@@ -1,10 +1,12 @@
 body {
-  background-color: #272727; }
+  background-color: #272727;
+  font-family: 'Montserrat', arial; }
 
 .container {
   width: 548px;
   margin: 54px auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .docker {
   width: 342px;
@@ -21,10 +23,9 @@ header {
     padding: 15px 43px;
     text-transform: uppercase;
     background-color: #ffffff;
-    height: 50px;
+    height: 52px;
     margin-top: 127px;
     font-size: 24px;
-    font-family: 'Montserrat', arial;
     -webkit-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
     -ms-border-radius: 0 3px 3px 0;
@@ -34,3 +35,93 @@ header {
     left: 0;
     top: 0;
     z-index: 1; }
+
+.list-person {
+  height: auto;
+  margin-top: 15px;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px; }
+  .list-person ul {
+    overflow: hidden; }
+    .list-person ul li {
+      list-style: none; }
+      .list-person ul li:nth-child(even) a {
+        background-color: #f2f1f1; }
+        .list-person ul li:nth-child(even) a:hover {
+          background-color: #ba3638; }
+          .list-person ul li:nth-child(even) a:hover .list-person-image figure {
+            border: 5px solid #fff; }
+          .list-person ul li:nth-child(even) a:hover .list-person-description p {
+            color: #f2f1f1; }
+          .list-person ul li:nth-child(even) a:hover .list-person-description span {
+            color: #330d0e; }
+      .list-person ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        overflow: hidden; }
+        .list-person ul li a .list-person-image {
+          position: relative;
+          width: 68px;
+          float: left; }
+          .list-person ul li a .list-person-image figure {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            width: 68px;
+            height: 68px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            border: 5px solid #ba3638; }
+            .list-person ul li a .list-person-image figure img {
+              width: 82px;
+              margin-left: -10px;
+              margin-top: -3px;
+              z-index: 5; }
+          .list-person ul li a .list-person-image .number {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            top: 48px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #707070;
+            text-align: center;
+            font-size: 14px;
+            line-height: 18px;
+            border: 1px solid #707070; }
+        .list-person ul li a .list-person-description {
+          float: left;
+          margin-left: 18px;
+          padding: 20px 0; }
+          .list-person ul li a .list-person-description p {
+            font-size: 18px;
+            color: #ba3638; }
+          .list-person ul li a .list-person-description span {
+            font-size: 12px;
+            color: #909090; }
+      .list-person ul li:hover {
+        background-color: #ba3638; }
+        .list-person ul li:hover .list-person-image figure {
+          border: 5px solid #fff; }
+        .list-person ul li:hover .list-person-description p {
+          color: #f2f1f1; }
+        .list-person ul li:hover .list-person-description span {
+          color: #330d0e; }
+
+.tooltip {
+  position: absolute;
+  right: 0;
+  top: 400px;
+  width: 162px; }
+  .tooltip .tooltip-status ul li {
+    list-style: none; }
