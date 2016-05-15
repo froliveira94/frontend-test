@@ -120,6 +120,7 @@ header {
 
 .tooltip {
   position: absolute;
+  display: none;
   right: 0;
   top: 215px;
   width: 162px; }

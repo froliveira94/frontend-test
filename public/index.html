@@ -11,6 +11,25 @@
 
   </head>
   <body>
+
+    <!-- list Ranking -->
+    <script id="teste" type="text/x-jquery-tmpl">
+        <li>
+          <a href="">
+            <div class="list-person-image">
+              <figure>
+                <img src='${picture}' alt="${name}">
+              </figure>
+              <div class="number">${length}</div>
+            </div>
+            <div class="list-person-description">
+              <p>${name}</p>
+              <span>${description}</span>
+            </div>
+          </a>
+        </li>
+    </script>
+
     <div class="container">
       <div class="docker">
         <header>
@@ -18,78 +37,7 @@
           <h2>Ranking</h2>
         </header>
         <section class="list-person">
-          <ul>
-            <li>
-              <a href="">
-                <div class="list-person-image">
-                  <figure>
-                    <img src="http://im.r7.com/record/files/2C96/1618/3F6E/369D/013F/72F6/B48C/5BBD/B%C3%A1rbaraEvans1.jpg" alt="">
-                  </figure>
-                  <div class="number">1</div>
-                </div>
-                <div class="list-person-description">
-                  <p>Bárbara Evans</p>
-                  <span>Modelo e filha de Monique Evans</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="list-person-image">
-                  <figure>
-                    <img src="http://im.r7.com/record/files/2C96/1618/3F6E/369D/013F/72F6/B48C/5BBD/B%C3%A1rbaraEvans1.jpg" alt="">
-                  </figure>
-                  <div class="number">1</div>
-                </div>
-                <div class="list-person-description">
-                  <p>Bárbara Evans</p>
-                  <span>Modelo e filha de Monique Evans</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="list-person-image">
-                  <figure>
-                    <img src="http://im.r7.com/record/files/2C96/1618/3F6E/369D/013F/72F6/B48C/5BBD/B%C3%A1rbaraEvans1.jpg" alt="">
-                  </figure>
-                  <div class="number">1</div>
-                </div>
-                <div class="list-person-description">
-                  <p>Bárbara Evans</p>
-                  <span>Modelo e filha de Monique Evans</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="list-person-image">
-                  <figure>
-                    <img src="http://im.r7.com/record/files/2C96/1618/3F6E/369D/013F/72F6/B48C/5BBD/B%C3%A1rbaraEvans1.jpg" alt="">
-                  </figure>
-                  <div class="number">1</div>
-                </div>
-                <div class="list-person-description">
-                  <p>Bárbara Evans</p>
-                  <span>Modelo e filha de Monique Evans</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="list-person-image">
-                  <figure>
-                    <img src="http://im.r7.com/record/files/2C96/1618/3F6E/369D/013F/72F6/B48C/5BBD/B%C3%A1rbaraEvans1.jpg" alt="">
-                  </figure>
-                  <div class="number">1</div>
-                </div>
-                <div class="list-person-description">
-                  <p>Bárbara Evans</p>
-                  <span>Modelo e filha de Monique Evans</span>
-                </div>
-              </a>
-            </li>
-          </ul>
+          <ul id="showIt"></ul>
         </section>
       </div>
       <div class="tooltip">
@@ -107,5 +55,10 @@
       </div>
     </div>
 
+    <script src="javascripts/vendor/jquery-1.12.3.min.js"></script>
+    <script src="javascripts/vendor/underscore.min.js"></script>
+    <script src="javascripts/vendor/backbone.min.js"></script>
+    <script src="javascripts/vendor/jquery.tmpl.min.js"></script>
     <script src="javascripts/main.js"></script>
+  </body>
 </html>
