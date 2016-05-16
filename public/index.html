@@ -16,15 +16,32 @@
     <script id="teste" type="text/x-jquery-tmpl">
         <li>
           <a href="">
-            <div class="list-person-image">
-              <figure>
-                <img src='${picture}' alt="${name}">
-              </figure>
-              <div class="number">${length}</div>
+
+            <div class="list-person-item">
+              <div class="list-person-image">
+                <figure>
+                  <img src='${picture}' alt="${name}">
+                </figure>
+                  <div class="number">${number}</div>
+              </div>
+              <div class="list-person-description">
+                <p>${name}</p>
+                <span>${description}</span>
+              </div>
             </div>
-            <div class="list-person-description">
-              <p>${name}</p>
-              <span>${description}</span>
+
+            <div class="tooltip">
+              <img src="images/arrow-left-tooltip.png" alt="">
+              <div class="tooltip-status">
+                <ul>
+                  <li>Gostam</li>
+                  <li>${like + "%"}</li>
+                </ul>
+                <ul>
+                  <li>Não gostam</li>
+                  <li>${dislike + "%"}</li>
+                </ul>
+              </div>
             </div>
           </a>
         </li>
@@ -36,23 +53,11 @@
           <img src="images/a-fazenda.png" alt="A Fazenda">
           <h2>Ranking</h2>
         </header>
-        <section class="list-person">
-          <ul id="showIt"></ul>
-        </section>
       </div>
-      <div class="tooltip">
-        <img src="images/arrow-left-tooltip.png" alt="">
-        <div class="tooltip-status">
-          <ul>
-            <li>Gostam</li>
-            <li>37%</li>
-          </ul>
-          <ul>
-            <li>Não gostam</li>
-            <li>63%</li>
-          </ul>
-        </div>
-      </div>
+      <section class="list-person">
+        <ul class="list" id="list"></ul>
+      </section>
+
     </div>
 
     <script src="javascripts/vendor/jquery-1.12.3.min.js"></script>

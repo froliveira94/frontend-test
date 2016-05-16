@@ -37,37 +37,55 @@ header {
     z-index: 1; }
 
 .list-person {
+  width: 100%;
   height: auto;
   margin-top: 15px;
-  background-color: #fff;
+  margin-left: 32px;
+  float: left;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px; }
-  .list-person ul {
+  .list-person .list {
     overflow: hidden; }
-    .list-person ul li {
+    .list-person .list li {
+      position: relative;
       list-style: none; }
-      .list-person ul li:nth-child(even) a {
+      .list-person .list li:first-child a .list-person-item {
+        -webkit-border-radius: 3px 3px 0 0;
+        -moz-border-radius: 3px 3px 0 0;
+        -ms-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0; }
+      .list-person .list li:last-child a .list-person-item {
+        -webkit-border-radius: 0 0 3px 3px;
+        -moz-border-radius: 0 0 3px 3px;
+        -ms-border-radius: 0 0 3px 3px;
+        border-radius: 0 0 3px 3px; }
+      .list-person .list li:nth-child(even) a .list-person-item {
         background-color: #f2f1f1; }
-        .list-person ul li:nth-child(even) a:hover {
-          background-color: #ba3638; }
-          .list-person ul li:nth-child(even) a:hover .list-person-image figure {
-            border: 5px solid #fff; }
-          .list-person ul li:nth-child(even) a:hover .list-person-description p {
-            color: #f2f1f1; }
-          .list-person ul li:nth-child(even) a:hover .list-person-description span {
-            color: #330d0e; }
-      .list-person ul li a {
+      .list-person .list li a {
         display: block;
-        padding: 15px;
         text-decoration: none;
         overflow: hidden; }
-        .list-person ul li a .list-person-image {
+        .list-person .list li a .list-person-item {
+          background-color: #fff;
+          float: left;
+          width: 342px;
+          padding: 15px;
+          overflow: hidden; }
+          .list-person .list li a .list-person-item.active {
+            background-color: #ba3638; }
+            .list-person .list li a .list-person-item.active .list-person-image figure {
+              border: 5px solid #fff; }
+            .list-person .list li a .list-person-item.active .list-person-description p {
+              color: #f2f1f1; }
+            .list-person .list li a .list-person-item.active .list-person-description span {
+              color: #330d0e; }
+        .list-person .list li a .list-person-image {
           position: relative;
           width: 68px;
           float: left; }
-          .list-person ul li a .list-person-image figure {
+          .list-person .list li a .list-person-image figure {
             position: relative;
             display: block;
             overflow: hidden;
@@ -78,12 +96,12 @@ header {
             -ms-border-radius: 50%;
             border-radius: 50%;
             border: 5px solid #ba3638; }
-            .list-person ul li a .list-person-image figure img {
+            .list-person .list li a .list-person-image figure img {
               width: 82px;
               margin-left: -10px;
               margin-top: -3px;
               z-index: 5; }
-          .list-person ul li a .list-person-image .number {
+          .list-person .list li a .list-person-image .number {
             position: absolute;
             width: 20px;
             height: 20px;
@@ -99,30 +117,22 @@ header {
             font-size: 14px;
             line-height: 18px;
             border: 1px solid #707070; }
-        .list-person ul li a .list-person-description {
+        .list-person .list li a .list-person-description {
           float: left;
           margin-left: 18px;
           padding: 20px 0; }
-          .list-person ul li a .list-person-description p {
+          .list-person .list li a .list-person-description p {
             font-size: 18px;
             color: #ba3638; }
-          .list-person ul li a .list-person-description span {
+          .list-person .list li a .list-person-description span {
             font-size: 12px;
             color: #909090; }
-      .list-person ul li:hover {
-        background-color: #ba3638; }
-        .list-person ul li:hover .list-person-image figure {
-          border: 5px solid #fff; }
-        .list-person ul li:hover .list-person-description p {
-          color: #f2f1f1; }
-        .list-person ul li:hover .list-person-description span {
-          color: #330d0e; }
 
 .tooltip {
   position: absolute;
   display: none;
-  right: 0;
-  top: 215px;
+  right: 36px;
+  top: 20px;
   width: 162px; }
   .tooltip img {
     margin-top: 18px; }

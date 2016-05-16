@@ -38,33 +38,55 @@ header
     z-index: 1
 
 .list-person
+  width: 100%
   height: auto
   margin-top: 15px
-  background-color: #fff
+  margin-left: 32px
+  float: left
   +border-radius(3px)
 
-  ul
+  .list
     overflow: hidden
     li
+      position: relative
       list-style: none
+
+      &:first-child
+        a
+          .list-person-item
+            +border-radius(3px 3px 0 0)
+
+      &:last-child
+        a
+          .list-person-item
+            +border-radius(0 0 3px 3px)
+
       &:nth-child(even)
         a
-          background-color: #f2f1f1
-          &:hover
-            background-color: #ba3638
-            .list-person-image
-              figure
-                border: 5px solid #fff
-            .list-person-description
-              p
-                color: #f2f1f1
-              span
-                color: #330d0e
+          .list-person-item
+            background-color: #f2f1f1
       a
         display: block
-        padding: 15px
         text-decoration: none
         overflow: hidden
+
+        .list-person-item
+          background-color: #fff
+          float: left
+          width: 342px
+          padding: 15px
+          overflow: hidden
+
+          &.active
+            background-color: #ba3638
+            .list-person-image
+               figure
+                border: 5px solid #fff
+            .list-person-description
+                p
+                  color: #f2f1f1
+                span
+                  color: #330d0e
 
         .list-person-image
           position: relative
@@ -109,22 +131,11 @@ header
             color: #909090
 
 
-      &:hover
-        background-color: #ba3638
-        .list-person-image
-          figure
-            border: 5px solid #fff
-        .list-person-description
-          p
-            color: #f2f1f1
-          span
-            color: #330d0e
-
 .tooltip
   position: absolute
   display: none
-  right: 0
-  top: 215px
+  right: 36px
+  top: 20px
   width: 162px
   img
     margin-top: 18px
