@@ -85,7 +85,6 @@ _RankingListView = Backbone.View.extend({
           object["like"] = objPercent.like;
           object["dislike"] = objPercent.dislike;
           object["number"] = count;
-          console.log(object);
           var html = template.tmpl(object);
           el.append(html);
       });
@@ -97,7 +96,6 @@ _RankingListView = Backbone.View.extend({
 
 //Show tooltip and add class active
 var showTooltip = function(selector){
-  console.log(selector.next('.tooltip'));
   selector.hover(function(){
     $(this).addClass('active');
     $(this).next('.tooltip').css('display', 'block');
